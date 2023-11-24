@@ -1,0 +1,150 @@
+.extraHeader {
+  background: linear-gradient(93deg, #029018 -14.19%, #001604 107.55%);
+  padding: 5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.extraHeader h3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Jacques Francois", serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0%;
+  padding: 0%;
+}
+
+.extraHeader span {
+  color: #ffffff;
+  font-family: "Jacques Francois", serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.extraHeader p {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%; /* 21.824px */
+}
+
+.extraHeader button {
+  color: #046413;
+  font-family: "Jacques Francois", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  border: none;
+}
+
+.extraHeader button:hover {
+  cursor: pointer;
+}
+
+.nomineesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 4rem auto;
+  height: fit-content;
+  box-sizing: border-box;
+  justify-content: start;
+  gap: 2rem;
+}
+
+/* each card */
+.nominee {
+  width: 30%;
+  margin-bottom: 1%;
+  background-color: #ebfaed;
+  height: fit-content;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* min-height: 14rem; */
+  /* box-sizing: border-box; */
+}
+
+.nomineeImgDiv {
+  height: 9rem;
+}
+.nomineeImg {
+  height: 9rem;
+  width: 100%;
+}
+
+.nomineesDiv .nomineeName {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%;
+  background-color: #ffffff;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nomineesDiv .nomineeContent {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+  margin: 0;
+  padding: 1rem;
+}
+
+.nomineeInfo {
+  text-align: center;
+  margin: 0;
+}
+
+.bottomHeading {
+  color: #000;
+  text-align: center;
+  font-family: "Jacques Francois", serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.bottomSection {
+  margin-bottom: 5rem;
+}
+
+.bottomContent {
+  color: #000000;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+  width: 62.5rem;
+  height: 3.188rem;
+  flex-shrink: 0;
+  margin: auto;
+}

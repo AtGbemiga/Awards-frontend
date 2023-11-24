@@ -1,0 +1,11 @@
+.aboutP {
+  color: #000000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160.9%; /* 25.744px */
+  width: 80%;
+  margin: 4rem auto;
+}

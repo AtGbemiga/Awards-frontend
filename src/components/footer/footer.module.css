@@ -1,0 +1,78 @@
+.firstSection {
+  display: flex;
+  padding: 5rem;
+}
+
+.firstSection div:first-of-type {
+  margin-right: auto;
+}
+
+.socialMediaDiv {
+  display: flex;
+  gap: 1rem;
+}
+
+.logoDiv {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.companyLogo {
+  width: 14rem;
+  height: 3rem;
+}
+
+.socialMediaIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.newsletterDiv {
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.newsletterDiv span {
+  color: #000000;
+  font-family: "Jacques Francois", serif;
+  font-size: 1.45rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.newsletterInputDiv {
+  position: relative;
+}
+
+.newsletterBtn {
+  position: absolute;
+  background-color: #046413;
+  right: 1%;
+  bottom: 14%;
+  border: none;
+  padding: 0.3rem;
+}
+
+.newsletterBtn:hover {
+  cursor: pointer;
+}
+
+.newsletterInput {
+  width: 29rem;
+  height: 2.75rem;
+}
+
+.linksContainer {
+  display: flex;
+  color: #ffffff;
+  justify-content: space-evenly;
+}

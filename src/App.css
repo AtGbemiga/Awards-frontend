@@ -1,0 +1,54 @@
+.nav {
+  background: linear-gradient(93deg, #029018 -14.19%, #001604 107.55%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.nonActive {
+  padding: 0.3rem;
+}
+
+.current {
+  background-color: #027414;
+  color: white;
+  border-bottom: 2px solid #ffffff;
+  padding: 0.3rem;
+}
+
+.nav section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 16rem;
+  height: 4rem;
+}
+
+.nav section a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav section a:hover {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.footer {
+  background: linear-gradient(76deg, #046413 8.81%, #07ae21 90.01%);
+}

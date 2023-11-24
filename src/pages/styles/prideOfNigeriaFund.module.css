@@ -1,0 +1,144 @@
+.intro {
+  width: 70%;
+  margin: 3rem auto;
+  color: #000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%; /* 21.824px */
+}
+
+.toggleContainer > div {
+  width: 70%;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
+.toggleContainer > div > button {
+  width: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: "Jacques Francois", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%; /* 21.824px */
+  border: none;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggleContainer > div > button:hover {
+  cursor: pointer;
+}
+
+.toggleContainer > div > button > img {
+  font-size: 3rem;
+}
+
+.content {
+  background-color: #ebfaed;
+  padding: 0.625rem;
+}
+
+.helpingHandSection {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.header {
+  color: #000000;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%; /* 49.104px */
+}
+
+.moreContentContainer {
+  width: fit-content;
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  height: fit-content;
+}
+
+.moreContentContainer img {
+  height: 100%;
+}
+
+.formSection {
+  background-color: #ebfaed;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+.formSection h4 {
+  color: #000000;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 2.188rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%; /* 47.74px */
+  padding: 0;
+  margin: 0%;
+}
+
+.formSection p {
+  color: #000000;
+  text-align: justify;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%; /* 21.824px */
+}
+
+.formSection button {
+  background-color: #046413;
+  display: flex;
+  width: 31.438rem;
+  height: 2.938rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: "Jacques Francois";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+}
+
+.formSection button:hover {
+  cursor: pointer;
+}
+
+.btnActive {
+  background-color: #046413;
+  color: #ffffff;
+}
+
+.nonActive {
+  background-color: #ebfaed;
+}
+
+.btnActive p {
+  color: #ffffff;
+}
+
+.toggleContainer > div > button p {
+  padding: 0;
+  margin: 0;
+}

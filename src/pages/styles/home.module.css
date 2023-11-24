@@ -1,0 +1,364 @@
+.parentContainer {
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.parentContainer section:first-of-type {
+  width: 40%;
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  color: #ffffff;
+}
+
+.parentContainer section:first-of-type h2 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: #ffffff;
+  font-family: "Jacques Francois";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.parentContainer section:first-of-type p {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%; /* 21.824px */
+}
+
+.parentContainer section:first-of-type a {
+  text-decoration: none;
+  color: #046413;
+  /* padding: 1rem 2rem; */
+  font-family: "Jacques Francois", serif;
+  background-color: #ffffff;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  width: 27.625rem;
+  height: 2.938rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.parentContainer h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #046413;
+  font-family: "Jacques Francois", serif;
+  margin: 0%;
+  padding: 1.5rem;
+}
+
+.parentContainer section:nth-of-type(2) {
+  display: grid;
+  place-items: center;
+}
+
+.parentContainer section:nth-of-type(2) > div {
+  box-shadow: 12px 11px 40px 0px rgba(0, 0, 0, 0.25);
+  width: 74.375rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.25rem;
+  border: 1px solid blue;
+}
+
+.parentContainer section:nth-of-type(2) div div {
+  width: 16rem;
+  padding: 3rem;
+  border: 1px solid red;
+  background-color: #fff;
+}
+
+.parentContainer .ourPartnersContainer {
+  margin-bottom: 2rem;
+}
+
+.parentContainer .ourPartnersContainer div {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.parentContainer .ourPartnersContainer div p {
+  width: 40%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #0fb41d;
+}
+
+.parentContainer .ourPartnersContainer div:nth-of-type(2) {
+  height: 0.1rem;
+  width: 80%;
+  background-color: #0fb41d;
+  margin: 4rem auto 2rem auto;
+}
+
+.firstPromotionsSection {
+  background-color: #03520f;
+  height: fit-content;
+  padding: 1rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.firstPromotionsSection .firstPromotionsHeader {
+  width: 30.5rem;
+}
+
+.firstPromotionsSection .subParent {
+  padding: 4.438rem 7.375rem;
+}
+
+.firstPromotionsSection .firstPromotionsHeader h4 {
+  color: #ffffff;
+  font-family: "Jacques Francois", serif;
+  font-size: 2.188rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.firstPromotionsSection .firstPromotionsHeader p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.parentContainer .cardFlexParent {
+  display: flex;
+  gap: 3rem;
+}
+
+.parentContainer .card {
+  border: 3px solid #ffffff;
+  display: flex;
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
+
+.parentContainer .ancestry {
+  color: #000000;
+  font-family: "Jacques Francois", serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #d9f8de;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.parentContainer .ancestryText {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.parentContainer .ancestryBtn {
+  text-decoration: none;
+  display: flex;
+  width: 16.063rem;
+  height: 2.25rem;
+  padding: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #046413;
+  border: none;
+  color: #ffffff;
+  font-family: "Jacques Francois", serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.parentContainer .ancestryBtn:hover {
+  cursor: pointer;
+}
+
+.parentContainer .ourPartnersContainer div:nth-of-type(3) img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.parentContainer .supportPrideOfNigeriaContainer {
+  position: relative;
+}
+
+.parentContainer .supportPrideOfNigeriaContainer img {
+  width: 100%;
+  height: 100vh;
+}
+
+.parentContainer .supportPrideOfNigeriaContainer div {
+  position: absolute;
+  top: 30%;
+  right: 4rem;
+  width: 35%;
+  text-align: right;
+}
+
+.parentContainer .supportPrideOfNigeriaContainer div h2 {
+  color: #fff;
+  text-align: right;
+  font-family: "Jacques Francois", serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.parentContainer .supportPrideOfNigeriaContainer div a {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #046413;
+  font-family: "Jacques Francois", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.parentContainer .secondpromotionsContainer {
+  border: 3px solid red;
+  padding: 2rem;
+}
+
+.secondpromotionsContainer .secondpromotionsHeader {
+  border: 1px solid red;
+}
+
+.secondpromotionsContainer .secondpromotionsPicturesContainer {
+  border: 1px solid green;
+  margin: 3rem;
+}
+
+.secondpromotionsContainer .secondpromotionsTitle {
+  width: 30.5rem;
+  height: 2.875rem;
+  color: #000000;
+  font-family: "Jacques Francois";
+  font-size: 2.188rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.secondpromotionsContainer .secondpromotionsPicturesContainer {
+}
+
+.secondpromotionsContainer .secondpromotionsPTag {
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.secondpromotionsContainer .secondpromotionsFirstFlexArea {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem;
+  border: 2px solid blue;
+}
+
+.secondpromotionsContainer .secondpromotionsCard {
+  position: relative;
+  width: 100%;
+}
+
+.secondpromotionsContainer .secondpromotionsCardImg {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.77) 16.53%,
+    rgba(0, 0, 0, 0) 92.36%
+  );
+  width: 100%;
+}
+
+.secondpromotionsContainer .secondpromotionsContentPTag {
+  width: fit-content;
+  height: fit-content;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.secondpromotionsContainer .secondpromotionsContentBtn {
+  display: flex;
+  width: 16.5rem;
+  height: 2rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border: none;
+  color: #000;
+  font-family: "Jacques Francois", serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.secondpromotionsContainer .secondpromotionsContentBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.secondpromotionsContainer .secondpromotionsContent {
+  position: absolute;
+}
+
+/* last div */
+.whiteSpace {
+  background-color: #ffffff;
+  height: 12rem;
+}
+
+/* winnersHomeDiv */
+.winnersHomeDiv {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 100, 19, 0.04) -3.37%,
+    rgba(4, 100, 19, 0.19) 100%
+  );
+}

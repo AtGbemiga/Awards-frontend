@@ -1,0 +1,68 @@
+.intro {
+  color: #000000;
+  text-align: justify;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 154.4%; /* 24.704px */
+  width: 80%;
+  padding: 2rem 0 5rem 4rem;
+}
+
+.awardInfoDiv {
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.awardLogo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.section {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin: 4rem;
+}
+
+.section:last-of-type {
+  gap: 0;
+}
+
+.awardName {
+  color: #028a17;
+  font-family: "Jacques Francois", serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 0%;
+  margin: 0%;
+}
+.awardWordContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.awardWord {
+  color: #028a17;
+  font-family: "Jacques Francois";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0%;
+  padding: 0;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
