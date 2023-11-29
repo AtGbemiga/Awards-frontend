@@ -1,4 +1,4 @@
-import SecondPromotionsSection from "../components/home/SecondPromotionsSection";
+// import SecondPromotionsSection from "../components/home/SecondPromotionsSection";
 import WinnersOnHomePage from "../components/home/WinnersOnHomePage";
 import styles from "./styles/home.module.css";
 import { useNavigate } from "react-router-dom";
@@ -31,9 +31,9 @@ const HomePage = (): JSX.Element => {
           GET THE LATEST PRIDE OF NIGERIA NEWS
         </a>
       </section>
-      <section>
+      <section className={styles.aboutPrideOfNigeriaSection}>
         <h3>ABOUT PRIDE OF NIGERIA</h3>
-        <div>
+        <div className={styles.aboutPrideOfNigeriaCardContainer}>
           <div>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
             minima porro, ut hic doloremque, voluptate dolore ad, deserunt
@@ -61,9 +61,85 @@ const HomePage = (): JSX.Element => {
         </div>
       </section>
       <section>
-        <h3>OUR 2023 WINNERS</h3>
         <div className={styles.winnersHomeDiv}>
+          <h3>OUR 2023 WINNERS</h3>
           <WinnersOnHomePage />
+        </div>
+      </section>
+      <section className={styles.exploreNewDevelopmentSection}>
+        <div className={styles.exploreNewDevelopmentWidthController}>
+          <h4>
+            Explore new Development in Nigeria and Nigerian Achievers - both
+            Home and Abroad
+          </h4>
+          <p className={styles.subHeading}>
+            Nigerians doing well all over the world Nigerians doing well all
+            over the world
+          </p>
+          <div className={styles.exploreNewDevelopmentCardContainer}>
+            <div className={styles.exploreNewDevelopmentCard}>
+              <div>
+                <img src="/Rectangle 8b.svg" alt="two people smiling" />
+                <p className={styles.ancestryFamilyTree}>PEOPLE</p>
+              </div>
+              <div>
+                <p className={styles.contentForExploreNewSection}>
+                  Make quick family history discoveries with Ancestry Hints Make
+                  quick family history discoveries with Ancestry Hints
+                </p>
+                <button className={styles.exploreNewDevelopmentCardExploreBtn}>
+                  EXPLORE
+                </button>
+              </div>
+            </div>
+            <div className={styles.exploreNewDevelopmentCard}>
+              <div>
+                <img src="/Rectangle 8b.svg" alt="two people smiling" />
+                <p className={styles.ancestryFamilyTree}>NIGERIANS CHOICE</p>
+              </div>
+              <div>
+                <p className={styles.contentForExploreNewSection}>
+                  Make quick family history discoveries with Ancestry Hints Make
+                  quick family history discoveries with Ancestry Hints
+                </p>
+                <button className={styles.exploreNewDevelopmentCardExploreBtn}>
+                  EXPLORE
+                </button>
+              </div>
+            </div>
+            <div className={styles.exploreNewDevelopmentCard}>
+              <div>
+                <img src="/Rectangle 8b.svg" alt="two people smiling" />
+                <p className={styles.ancestryFamilyTree}>
+                  ANCESTRY- FAMILY TREE
+                </p>
+              </div>
+              <div>
+                <p className={styles.contentForExploreNewSection}>
+                  Make quick family history discoveries with Ancestry Hints Make
+                  quick family history discoveries with Ancestry Hints
+                </p>
+                <button className={styles.exploreNewDevelopmentCardExploreBtn}>
+                  EXPLORE
+                </button>
+              </div>
+            </div>
+            <div className={styles.exploreNewDevelopmentCard}>
+              <div>
+                <img src="/Rectangle 8b.svg" alt="two people smiling" />
+                <p className={styles.ancestryFamilyTree}>CHANGE MAKERS</p>
+              </div>
+              <div>
+                <p className={styles.contentForExploreNewSection}>
+                  Make quick family history discoveries with Ancestry Hints Make
+                  quick family history discoveries with Ancestry Hints
+                </p>
+                <button className={styles.exploreNewDevelopmentCardExploreBtn}>
+                  EXPLORE
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className={styles.firstPromotionsSection}>

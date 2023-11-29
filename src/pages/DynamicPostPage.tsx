@@ -2,11 +2,22 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import getPostByIdWithCommentsFn from "../lib/posts/getPostByIdWithComments";
 import styles from "./styles/dynamic.module.css";
+import SubHeading from "../components/app/SubHeading";
+import postCommentFn from "../lib/comments/postComment";
+import { useState } from "react";
 
 function DynamicPostPage(): JSX.Element {
+  // states for the comment form
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [statement, setStatement] = useState("");
+  const [showCommentForm, setShowCommentForm] = useState(true);
+  const [showCommentSuccessMessage, setShowCommentSuccessMessage] =
+    useState(false);
+
   // get the post id from the params. This is the post that was previous clicked on.
   const { post_id } = useParams();
-  console.log(post_id);
+  console.log(typeof post_id);
 
   // fetch the post using the post id
   const singlePostQuery = useQuery({
@@ -19,6 +30,16 @@ function DynamicPostPage(): JSX.Element {
     },
   });
 
+  // query to post comment
+  async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!post_id) return;
+    await postCommentFn({ post_id }, { name, email, statement });
+    console.log("comment posted");
+    setShowCommentForm(false);
+    setShowCommentSuccessMessage(true);
+  }
+
   if (singlePostQuery.isLoading) {
     return <div>Loading...</div>;
   }
@@ -29,48 +50,102 @@ function DynamicPostPage(): JSX.Element {
 
   return (
     <div>
+      <SubHeading value="PAST HEROS" />
       {Array.isArray(singlePostQuery.data) && (
         <div>
           {/* Why is typescript intellisence not working in here? */}
-          <section>
-            <div>
-              <img
-                src={singlePostQuery.data[0]?.picture}
-                alt={singlePostQuery.data[0]?.name}
-              />
+          <section className={styles.postSection}>
+            <div className={styles.postTopSection}>
+              <div>
+                <img
+                  src={singlePostQuery.data[0]?.picture}
+                  alt={singlePostQuery.data[0]?.name}
+                  className={styles.postImg}
+                />
+              </div>
+              <div>
+                <div className={styles.postNameAndComment}>
+                  <h3>{singlePostQuery.data[0]?.name}</h3>
+                  <p className={styles.commentCountDiv}>
+                    <img
+                      src="/Vector.svg"
+                      alt="commentIcon"
+                      className={styles.commentIcon}
+                    />
+                    {singlePostQuery.data[0]?.total_comments}
+                  </p>
+                </div>
+                <div className={styles.postSubHeadingAndYear}>
+                  <p className={styles.postSubHeading}>
+                    {singlePostQuery.data[0]?.sub_heading}
+                  </p>
+                  <p className={styles.postYear}>
+                    {singlePostQuery.data[0]?.year}
+                  </p>
+                </div>
+                <p className={styles.postContent}>
+                  {singlePostQuery.data[0]?.post.slice(0, 864)}
+                </p>
+              </div>
             </div>
-            <div>
-              <h3>{singlePostQuery.data[0]?.name}</h3>
-              <p>{singlePostQuery.data[0]?.sub_heading}</p>
-              <p>{singlePostQuery.data[0]?.year}</p>
-              <p>{singlePostQuery.data[0]?.total_comments}</p>
-              {/* <p>{singlePostQuery.data[0]?.post.slice(0, 128)}</p> */}
-            </div>
-            <div>
-              <p>{singlePostQuery.data[0]?.post}</p>
+            <div className={styles.postContent}>
+              <p>{singlePostQuery.data[0]?.post.slice(864)}</p>
             </div>
           </section>
-          <section className={styles.postCommentSection}>
-            <h4 className={styles.postCommentHeader}>Drop a Comment</h4>
+          {showCommentForm && (
+            <form
+              className={styles.postCommentSection}
+              onSubmit={handleFormSubmit}
+            >
+              <div className={styles.postCommentHeadingAndButtonDiv}>
+                <h4 className={styles.postCommentHeader}>Drop a Comment</h4>
+                <button>Submit</button>
+              </div>
 
-            <div>
-              <div>
-                <label htmlFor="">Email</label>
-                <input type="text" />
+              <div className={styles.postCommentForm}>
+                <div>
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    aria-required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    aria-required
+                  />
+                </div>
               </div>
-              <div>
-                <label htmlFor="">Name</label>
-                <input type="text" />
+              <div className={styles.postCommentTextareaDiv}>
+                <label htmlFor="statement">
+                  Why do they deserve the award? (Please include as much detail
+                  as possible):
+                </label>
+                <textarea
+                  id="statement"
+                  value={statement}
+                  onChange={(e) => setStatement(e.target.value)}
+                  required
+                  aria-required
+                />
               </div>
+            </form>
+          )}
+          {showCommentSuccessMessage && (
+            <div className={styles.commentSuccessMessage}>
+              <p>thank you for your comment</p>
             </div>
-            <div>
-              <label htmlFor="">
-                Why do they deserve the award? (Please include as much detail as
-                possible):
-              </label>
-              <textarea />
-            </div>
-          </section>
+          )}
         </div>
       )}
     </div>

@@ -8,6 +8,47 @@
 
 .nonActive {
   padding: 0.3rem;
+  color: #ffffff;
+}
+
+.dropdown {
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+
+.dropdownContentDiv {
+  position: absolute;
+  background-color: #ffffff;
+  right: 2rem;
+  top: 10.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dropdownContent {
+  color: #000000;
+  display: block;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dropdownContentSecondLink {
+  margin-top: 0.5rem;
 }
 
 .current {
@@ -20,7 +61,7 @@
 .nav section {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .logoContainer {
@@ -35,7 +76,7 @@
 }
 
 .nav section a {
-  color: #ffffff;
+  /* color: #ffffff; */
   text-decoration: none;
   font-size: 1.2rem;
 }

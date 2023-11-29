@@ -92,6 +92,7 @@ function Footer(): JSX.Element {
             <li>Shop</li>
           </ul>
         </div>
+        <img src="/Ellipse 1.svg" alt="Ellipse 1 circle" />
       </section>
     </>
   );

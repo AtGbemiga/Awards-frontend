@@ -1,0 +1,95 @@
+.registerFormSection {
+  position: fixed;
+  width: 43rem;
+  height: 34.3125rem;
+  flex-shrink: 0;
+  background-color: #d9d9d9;
+  top: 5%;
+  left: 25%;
+  z-index: 1;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input {
+  width: 98%;
+  margin-top: 1rem;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom-color: #000000;
+  background-color: #d9d9d9;
+}
+
+.form .submitBtn {
+  display: flex;
+  width: 21.1875rem;
+  padding: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #046413;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%;
+  border: none;
+  margin-top: 1rem;
+}
+
+.form .submitBtn:hover {
+  cursor: pointer;
+}
+
+.loginOption {
+  text-align: center;
+}
+
+.loginOption p {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+}
+
+.loginOptionLink {
+  color: #3ba8f6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.loginOptionLink:hover {
+  cursor: pointer;
+}
+
+.passwordErrorDiv {
+  height: 1.5rem;
+}
+
+.passwordError {
+  color: #ff3321;
+}

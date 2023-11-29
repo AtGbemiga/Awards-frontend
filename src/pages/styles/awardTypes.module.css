@@ -3,7 +3,7 @@
   display: flex;
   gap: 3rem;
   padding: 1rem 1rem 1rem 6rem;
-  border-bottom: 2px solid #028a17;
+  border-bottom: 0.125rem solid #028a17;
 }
 
 .specificPageNav button {
@@ -36,7 +36,7 @@
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 136.4%; /* 32.736px */
+  line-height: 136.4%;
 }
 
 .awardContent div p {
@@ -46,7 +46,7 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 136.4%; /* 21.824px */
+  line-height: 136.4%;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -62,7 +62,7 @@
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 136.4%; /* 32.736px */
+  line-height: 136.4%;
 }
 
 .benefitContent div p {
@@ -72,7 +72,7 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 136.4%; /* 21.824px */
+  line-height: 136.4%;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -80,11 +80,11 @@
 .active {
   background-color: #046413;
   color: #ffffff;
-  border: 1px solid #046413;
+  border: 0.0625rem solid #046413;
 }
 
 .nonActive {
-  border: 1.5px solid rgba(4, 100, 19, 0.5);
+  border: 0.0938rem solid rgba(4, 100, 19, 0.5);
   background: rgba(200, 250, 208, 0.39);
   color: rgba(4, 100, 19, 0.5);
 }

@@ -1,0 +1,106 @@
+.videoCard {
+  border: 3px solid red;
+  display: flex;
+  height: fit-content;
+  padding: 4rem;
+  justify-content: center;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.videoOuterDiv {
+  width: 45%;
+  border: 3px solid black;
+  height: 35rem;
+}
+
+.videoInfo {
+  border: 2px solid blue;
+  width: 40%;
+  padding: 0 1rem;
+}
+
+.creatorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.creatorInfo h3 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.creatorInfo p {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reelActions {
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.reelActions div:nth-of-type(1) {
+  display: flex;
+  gap: 2rem;
+}
+
+.reelActions div:nth-of-type(2) p {
+  color: #046413;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.reelInfo {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.reelInfo .creatorName {
+  font-weight: 700;
+}
+
+.likeCountDiv {
+  display: "block";
+}
+
+.likeCountDiv img:hover {
+  cursor: pointer;
+}
+
+.likeCount {
+  margin: 0;
+  padding: 0;
+}
+
+.dropAComment {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%; /* 32.736px */
+}

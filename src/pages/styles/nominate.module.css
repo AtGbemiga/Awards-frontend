@@ -63,7 +63,7 @@
   margin: 4rem auto;
   height: fit-content;
   box-sizing: border-box;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 2rem;
 }
 

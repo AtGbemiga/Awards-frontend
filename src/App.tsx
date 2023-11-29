@@ -24,6 +24,9 @@ import NominateFormPage from "./pages/NominateForm";
 import FormSubmissionMsg from "./pages/FormSubmissionMsg";
 import { useLocation } from "react-router-dom";
 import DynamicPostPage from "./pages/DynamicPostPage";
+import { useState } from "react";
+import ShortVideos from "./pages/ShortVideos";
+import DynamicShortVideoPage from "./pages/DynamicShortVideoPage";
 
 function App(): JSX.Element {
   // create routes
@@ -43,11 +46,16 @@ function App(): JSX.Element {
         <Route path="gallary" element={<GallaryPage />} />
         <Route path="regional-awards" element={<RegionalAwardsPage />} />
         <Route path="past-heros" element={<PastHerosPage />} />
+        <Route path="short-videos" element={<ShortVideos />} />
 
         {/*  */}
         <Route path="nominate-form" element={<NominateFormPage />} />
         <Route path="form-submitted" element={<FormSubmissionMsg />} />
         <Route path="post/:post_id" element={<DynamicPostPage />} />
+        <Route
+          path="short-videos/:video_id"
+          element={<DynamicShortVideoPage />}
+        />
       </Route>
     )
   );
@@ -63,6 +71,12 @@ export default App;
 
 const Root = (): JSX.Element => {
   const location = useLocation();
+  const [showDropDown, setShowDropDown] = useState(true);
+
+  const handleDropDown = () => {
+    setShowDropDown((prevState) => !prevState);
+  };
+
   return (
     <>
       <nav className="nav">
@@ -157,6 +171,22 @@ const Root = (): JSX.Element => {
           >
             Past Heros
           </Link>
+          <button className="dropdown" onClick={handleDropDown}>
+            More <img src="/Vector 39.svg" alt="drop down arrow" />
+          </button>
+          {showDropDown && (
+            <div className="dropdownContentDiv">
+              <Link to="" className="dropdownContent">
+                Group
+              </Link>
+              <Link
+                to="short-videos"
+                className="dropdownContent dropdownContentSecondLink"
+              >
+                Reels
+              </Link>
+            </div>
+          )}
         </section>
       </nav>
       {/* research the appoprate tag that replaces header */}

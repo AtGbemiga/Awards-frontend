@@ -1,8 +1,191 @@
+.postSection {
+  padding: 4rem;
+}
+
+.postTopSection {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  gap: 2rem;
+}
+
+.postTopSection .postImg {
+  height: 100%;
+  width: 40vw;
+}
+
+.postTopSection h3 {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%;
+  margin: 0 auto 0 0;
+}
+
+.postNameAndComment {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.commentIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+}
+
+.commentCountDiv {
+  display: flex;
+  align-items: center;
+}
+
 .postCommentHeader {
   color: #000000;
   font-family: "Montserrat";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 136.4%; /* 32.736px */
+  line-height: 136.4%;
+}
+
+.postSubHeadingAndYear {
+  display: flex;
+}
+
+.postSubHeading {
+  background-color: rgba(0, 209, 33, 0.15);
+  margin-right: auto;
+  padding: 0.5rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+}
+
+.postYear {
+  background-color: rgba(0, 209, 33, 0.15);
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+  padding: 0.5rem 1rem;
+}
+
+.postContent {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+  text-align: justify;
+}
+
+.postCommentSection {
+  padding: 0 4rem;
+}
+
+.postCommentHeader {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%;
+}
+
+.postCommentForm {
+  display: flex;
+  gap: 2rem;
+}
+
+.postCommentForm label {
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+}
+
+.postCommentForm input {
+  width: 30vw;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.postCommentTextareaDiv {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136.4%;
+}
+
+.postCommentTextareaDiv label {
+  display: block;
+  margin-top: 2rem;
+}
+
+.postCommentTextareaDiv textarea {
+  width: 63vw;
+  border-bottom-color: #000000;
+  border-left-color: #00000066;
+  border-right-color: #00000066;
+  border-top-color: #00000066;
+  resize: vertical;
+}
+
+.postCommentHeadingAndButtonDiv {
+  display: flex;
+  align-items: center;
+}
+
+.postCommentHeadingAndButtonDiv h4 {
+  margin-right: auto;
+}
+
+.postCommentHeadingAndButtonDiv button {
+  display: flex;
+  width: 12.75rem;
+  padding: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #046413;
+  border: none;
+  height: 3rem;
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.4%;
+}
+
+.postCommentHeadingAndButtonDiv button:hover {
+  cursor: pointer;
+}
+
+.commentSuccessMessage {
+  color: #000000;
+  text-align: center;
+  font-family: "Jacques Francois", serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 4rem;
 }
