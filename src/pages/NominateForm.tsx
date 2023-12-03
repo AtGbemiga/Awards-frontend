@@ -9,7 +9,7 @@ import Cookies from "js-cookie";
 import Login from "../components/login/Login";
 function NominateFormPage() {
   const [formData, setFormData] = useState<NominationForm>({
-    award_name: "",
+    award_name: "TSBCommunityHeroAward",
     hero_name: "",
     award_reason: "",
     hero_contact: "",
@@ -17,10 +17,10 @@ function NominateFormPage() {
     your_email: "",
     phone_number: "",
     contact_you: "",
-    join_newsletter: "",
+    join_newsletter: "no",
   });
   const navigate = useNavigate();
-  const [displayRegisterForm, setDisplayRegisterForm] = useState(true); // default false
+  const [displayRegisterForm, setDisplayRegisterForm] = useState(false); // default false
   const [toggleRegisterAndLogin, setToggleRegisterAndLogin] = useState(true);
 
   function handleInput(
@@ -70,7 +70,7 @@ function NominateFormPage() {
         onClick={() => setDisplayRegisterForm(false)}
       >
         <p className={styles.formHeader}>
-          Nominate someone for the Pride of Britain Awards 2024 by filling in
+          Nominate someone for the Pride of Nigeria Awards 2024 by filling in
           the form below. Nominations close at 11:59pm on Sunday 11th August
           2024.
         </p>
@@ -137,29 +137,31 @@ function NominateFormPage() {
             required
           />
         </div>
-        <div className={styles.textInputDiv}>
-          <label htmlFor="your_email"></label>
-          <input
-            type="text"
-            name="your_email"
-            id="your_email"
-            placeholder="Your email"
-            value={formData.your_email}
-            onChange={handleInput}
-            required
-          />
-        </div>
-        <div className={styles.textInputDiv}>
-          <label htmlFor="phone_number"></label>
-          <input
-            type="text"
-            name="phone_number"
-            id="phone_number"
-            placeholder="Phone number"
-            value={formData.phone_number}
-            onChange={handleInput}
-            required
-          />
+        <div className={styles.emailAndPhoneFlexArea}>
+          <div className={styles.textInputDiv}>
+            <label htmlFor="your_email"></label>
+            <input
+              type="text"
+              name="your_email"
+              id="your_email"
+              placeholder="Your email"
+              value={formData.your_email}
+              onChange={handleInput}
+              required
+            />
+          </div>
+          <div className={styles.textInputDiv}>
+            <label htmlFor="phone_number"></label>
+            <input
+              type="text"
+              name="phone_number"
+              id="phone_number"
+              placeholder="Phone number"
+              value={formData.phone_number}
+              onChange={handleInput}
+              required
+            />
+          </div>
         </div>
         <div className={styles.textInputDiv}>
           <label htmlFor="contact_you"></label>
@@ -174,7 +176,7 @@ function NominateFormPage() {
           />
         </div>
         <p>
-          Would you like to receive Pride of Britain Awards updates from the
+          Would you like to receive Pride of Nigeria Awards updates from the
           Mirror sent direct to your inbox?
         </p>
         <div>
@@ -199,15 +201,13 @@ function NominateFormPage() {
           We use your sign-up to provide content in ways you've consented to and
           to improve our understanding of you. This may include adverts from us
           and 3rd parties based on our understanding. You can unsubscribe at any
-          time. <a href="#">More Info.</a>
-        </p>
-        <p>
-          By submitting your nomination form you consent to our terms and
-          conditions, which can be viewed <a href="#">here.</a>
+          time. <a href="#">More Info</a>. By submitting your nomination form
+          you consent to our terms and conditions, which can be viewed{" "}
+          <a href="#">here.</a>
         </p>
         <p>
           Personal Data will be processed in accordance with the Pride of
-          Britain Awards Privacy Policy <a href="">here.</a>
+          Nigeria Awards Privacy Policy <a href="">here.</a>
         </p>
 
         <div className={styles.submitBtnDiv}>
@@ -219,6 +219,8 @@ function NominateFormPage() {
           {toggleRegisterAndLogin ? (
             <Register
               passedEmail={formData.your_email}
+              passedName={formData.your_name}
+              passedPhoneNumber={formData.phone_number}
               setDisplayRegisterForm={setDisplayRegisterForm}
             />
           ) : (

@@ -1,0 +1,18 @@
+.tagsArea {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2.625rem;
+}
+
+.tagsArea button {
+  padding: 0.625rem;
+  color: #ffffff;
+  background-color: #046413;
+  border: none;
+}
+
+.tagsArea button:hover {
+  cursor: pointer;
+}

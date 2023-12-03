@@ -189,3 +189,48 @@
   text-transform: uppercase;
   padding-bottom: 4rem;
 }
+
+/* media query */
+/* media query */
+@media screen and (max-width: 720px) {
+  .postSection {
+    padding: 0.3rem;
+  }
+  .postTopSection {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    gap: 2rem;
+  }
+  .postTopSection .postImg {
+    height: 100%;
+    width: 100%;
+  }
+  .postCommentSection {
+    padding: 0.3rem;
+  }
+  .postCommentHeadingAndButtonDiv {
+    display: block;
+  }
+  .postCommentForm {
+    display: block;
+    gap: 2rem;
+  }
+  .postCommentForm input {
+    width: 90vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .singleLabelAndInput {
+    margin-top: 2rem;
+  }
+  .postCommentTextareaDiv textarea {
+    width: 90vw;
+    border-bottom-color: #000000;
+    border-left-color: #00000066;
+    border-right-color: #00000066;
+    border-top-color: #00000066;
+    resize: vertical;
+  }
+}

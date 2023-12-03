@@ -114,3 +114,34 @@
   width: 0.625rem;
   height: 0.625rem;
 }
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .searchSection {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
+  .searchSection select {
+    height: 2rem;
+    width: 20.625rem;
+  }
+  .allPostDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 90%;
+    margin: 0 auto 4rem auto;
+    row-gap: 2rem;
+    border: 1px solid blue;
+  }
+  .post {
+    width: 90%;
+    height: 40%;
+    text-decoration: none;
+  }
+}

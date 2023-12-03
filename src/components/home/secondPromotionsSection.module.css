@@ -1,0 +1,194 @@
+.topCardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.topCard {
+  position: relative;
+  width: 35rem;
+}
+
+.topCardImg {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.77) 16.53%,
+    rgba(0, 0, 0, 0) 92.36%
+  );
+  position: absolute;
+  width: 100%;
+  height: 22.2rem;
+}
+
+.overlayBottom {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.77) 16.53%,
+    rgba(0, 0, 0, 0) 92.36%
+  );
+  position: absolute;
+  width: 100%;
+  height: 14.2rem;
+}
+
+.topCardContent {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  height: fit-content;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.topCardContent h4 {
+  color: #000000;
+  text-align: left;
+  font-family: "Moul", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0;
+  padding-left: 2rem;
+}
+
+.topCardContent p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 10rem auto 3rem auto;
+  width: 30.9375rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+}
+
+.topCardContent button {
+  display: flex;
+  width: 16.5rem;
+  height: 2rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Jacques Francois", serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: none;
+  margin: 0 auto;
+}
+
+.topCardContent button:hover {
+  cursor: pointer;
+}
+/* hr*/
+.bottomCardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 87%;
+  margin: 2rem auto 0 auto;
+}
+
+.bottomCard {
+  position: relative;
+  width: 35rem;
+}
+
+.bottomCardImg {
+  width: 100%;
+}
+
+.bottomCardContent {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  height: fit-content;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bottomContent h4 {
+  color: #000000;
+  text-align: left;
+  font-family: "Mouli", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.bottomCardContent h4 {
+  padding-left: 2rem;
+  color: #000000;
+  font-family: "Moul", "serif";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bottomCardContent p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 4rem auto 2rem auto;
+  width: 18.6875rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+}
+
+.bottomCardContent button {
+  display: flex;
+  width: 16.5rem;
+  height: 2rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Jacques Francois", serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: none;
+  margin: 0 auto;
+}
+
+.bottomCardContent button:hover {
+  cursor: pointer;
+}
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .topCardContainer {
+    display: block;
+    justify-content: center;
+    /* gap: 3rem; */
+  }
+  .topCard {
+    position: relative;
+    width: 100%;
+  }
+}

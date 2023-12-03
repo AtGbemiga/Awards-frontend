@@ -1,0 +1,29 @@
+/* .clubPostForm {
+  border: 1px solid red;
+} */
+
+.clubPostForm textarea {
+  border: 0.0625rem solid #028a17;
+  resize: none;
+  width: 99%;
+  height: 3.0625rem;
+  flex-shrink: 0;
+}
+
+.clubPostForm .buttonsArea {
+  display: flex;
+  gap: 1rem;
+}
+
+.submitBtn {
+  width: 18.6875rem;
+  height: 2.25rem;
+  background-color: #028a17;
+  border: none;
+  color: var(--Essential-White, #f8f8f8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

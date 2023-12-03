@@ -47,8 +47,9 @@ function WinnerPage(): JSX.Element {
           name="searchWinnerByYear"
           id="searchWinnerByYear"
           onChange={(e) => setYear(e.target.value)}
+          defaultValue={"DEFAULT"}
         >
-          <option disabled selected>
+          <option disabled value="DEFAULT">
             Select year
           </option>
           <option value="2023">2023</option>

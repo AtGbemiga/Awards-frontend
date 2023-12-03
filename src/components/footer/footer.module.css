@@ -1,3 +1,7 @@
+.footer {
+  position: relative;
+}
+
 .firstSection {
   display: flex;
   padding: 5rem;
@@ -75,4 +79,45 @@
   display: flex;
   color: #ffffff;
   justify-content: space-evenly;
+}
+
+.linksContainer div ul li {
+  z-index: 1;
+}
+
+.ellipse {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+}
+
+.ellipseTwo {
+  position: absolute;
+  right: 20%;
+  bottom: 5%;
+}
+
+.ellipseThree {
+  position: absolute;
+  right: 1%;
+  bottom: 45%;
+}
+
+.ellipseFour {
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  opacity: 0.5;
+}
+
+.ellipseFive {
+  position: absolute;
+  left: 20%;
+  bottom: 40%;
+}
+
+.ellipseSix {
+  position: absolute;
+  left: 0.5%;
+  top: 2%;
 }

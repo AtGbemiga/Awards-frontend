@@ -1,13 +1,20 @@
 import Cookies from "js-cookie";
+import { Auth } from "../../typesAndInterfaces/auth";
 
 export const authFn = async (
   {
     username,
     email,
     password,
-  }: { username?: string; email: string; password: string },
+    users_phone_number,
+  }: {
+    username?: string;
+    email: string;
+    password: string;
+    users_phone_number?: string;
+  },
   identifier: string
-) => {
+): Promise<Auth> => {
   let url;
 
   // identifier is either login, signup or reset password
@@ -30,7 +37,7 @@ export const authFn = async (
       Accept: "application/json",
     },
 
-    body: JSON.stringify({ username, email, password }),
+    body: JSON.stringify({ username, email, password, users_phone_number }),
   });
 
   console.log("res", res);
@@ -46,7 +53,7 @@ export const authFn = async (
   }
 
   // get good res at this stage
-  const data = await res.json();
+  const data: Auth = await res.json();
 
   // remove cookie if it already exists
   Cookies.set("token", data.token, {

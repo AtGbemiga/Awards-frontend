@@ -41,3 +41,16 @@
   margin: 0;
   padding: 0;
 }
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .section:first-child h1 {
+    font-size: 2.3rem;
+  }
+  .section:nth-child(2) h2 {
+    font-size: 1.8rem;
+  }
+  .logo {
+    display: none;
+  }
+}

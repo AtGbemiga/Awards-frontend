@@ -6,6 +6,21 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  z-index: -1;
+}
+
+.overlay {
+  background: linear-gradient(
+    91deg,
+    #03520f 34.11%,
+    rgba(4, 100, 19, 0) 75.09%
+  );
+  position: absolute;
+  /*top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
 }
 
 .parentContainer section:first-of-type {
@@ -14,9 +29,12 @@
   top: 3%;
   left: 6%;
   color: #ffffff;
+  border: 1px solid red;
 }
 
 .parentContainer section:first-of-type h2 {
+  z-index: 3;
+  position: relative;
   font-size: 4rem;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -35,13 +53,14 @@
   font-size: 1;
   font-style: normal;
   font-weight: 400;
-  line-height: 136.4%; /* 21.824px */
+  line-height: 136.4%;
+  z-index: 3;
+  position: relative;
 }
 
 .parentContainer section:first-of-type a {
   text-decoration: none;
   color: #046413;
-  /* padding: 1rem 2rem; */
   font-family: "Jacques Francois", serif;
   background-color: #ffffff;
   line-height: normal;
@@ -53,6 +72,8 @@
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
+  z-index: 3;
+  position: relative;
 }
 
 .parentContainer h3 {
@@ -214,7 +235,22 @@
 .parentContainer .supportPrideOfNigeriaContainer img {
   width: 100%;
   height: 100vh;
+  /* z-index: -1; */
 }
+
+/* .parentContainer .supportPrideOfNgGradient {
+  background: linear-gradient(
+    290deg,
+    #046413 39.58%,
+    rgba(4, 100, 19, 0) 68.33%
+  );
+  position: absolute;
+  width: 100%;
+  height: 50rem;
+  bottom: 10px;
+  right: 0;
+  border: 1px solid red;
+} */
 
 .parentContainer .supportPrideOfNigeriaContainer div {
   position: absolute;
@@ -452,4 +488,205 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 4rem;
+}
+
+.secondPromotionsSection {
+  margin: 6rem 0;
+}
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .heroImg {
+    height: 50vh;
+  }
+  .overlay {
+    height: 50vh;
+  }
+  .parentContainer section:first-of-type {
+    width: 70%;
+    top: 2%;
+    left: 3%;
+  }
+  .parentContainer section:first-of-type h2 {
+    font-size: 1.5rem;
+  }
+  .parentContainer section:first-of-type a {
+    width: 16.625rem;
+    height: 1.938rem;
+    padding: 0;
+    font-size: 0.7rem;
+  }
+  .aboutPrideOfNigeriaSection {
+    display: block;
+  }
+  .parentContainer h3 {
+    font-size: 1.5rem;
+  }
+  .aboutPrideOfNigeriaCardContainer {
+    width: 100vw;
+    display: grid;
+  }
+  .exploreNewDevelopmentCardContainer {
+    display: block;
+    margin: 1rem auto;
+  }
+  .firstPromotionsSection {
+    /* background-color: #03520f;
+    height: fit-content; */
+    padding: 0rem;
+    /* margin: 4rem 0 2rem 0; */
+  }
+
+  .firstPromotionsSection .firstPromotionsHeader {
+    width: 30.5rem;
+  }
+
+  .firstPromotionsSection .subParent {
+    padding: 2rem 0;
+  }
+
+  .firstPromotionsSection .firstPromotionsHeader h4 {
+    color: #ffffff;
+    font-family: "Jacques Francois", serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  .firstPromotionsSection .firstPromotionsHeader p {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .parentContainer .cardFlexParent {
+    display: block;
+    /* gap: 3rem; */
+  }
+
+  .parentContainer .card {
+    border: 3px solid #ffffff;
+    display: block;
+    background-color: #ffffff;
+    /* padding: 0.5rem; */
+  }
+
+  .parentContainer .ancestry {
+    color: #000000;
+    font-family: "Jacques Francois", serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #d9f8de;
+    padding: 0.5rem;
+    width: fit-content;
+  }
+
+  .parentContainer .ancestryText {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .parentContainer .ancestryBtn {
+    text-decoration: none;
+    display: flex;
+    width: 16.063rem;
+    height: 2.25rem;
+    padding: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background-color: #046413;
+    border: none;
+    color: #ffffff;
+    font-family: "Jacques Francois", serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .parentContainer .ancestryBtn:hover {
+    cursor: pointer;
+  }
+}
+
+/* our partners media query */
+@media screen and (max-width: 720px) {
+  .parentContainer .ourPartnersContainer {
+    margin-bottom: 2rem;
+  }
+
+  .parentContainer .ourPartnersContainer div {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .parentContainer .ourPartnersContainer div p {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #0fb41d;
+  }
+
+  .parentContainer .ourPartnersContainer div:nth-of-type(2) {
+    height: 0.1rem;
+    width: 95%;
+    background-color: #0fb41d;
+    margin: 4rem auto 2rem auto;
+  }
+
+  .parentContainer .ourPartnersContainer div:nth-of-type(3) img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* support pride of nigeria section */
+@media screen and (max-width: 720px) {
+  .parentContainer .supportPrideOfNigeriaContainer div {
+    position: absolute;
+    top: 30%;
+    right: 4rem;
+    width: 75%;
+    text-align: right;
+  }
+
+  .parentContainer .supportPrideOfNigeriaContainer div h2 {
+    color: #ffffff;
+    text-align: right;
+    font-family: "Jacques Francois", serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .parentContainer .supportPrideOfNigeriaContainer div a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: #046413;
+    font-family: "Jacques Francois", serif;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
 }

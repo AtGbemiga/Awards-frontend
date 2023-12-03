@@ -12,6 +12,24 @@ function ShortVideos() {
     queryFn: getReelsLimitedInfoFn,
   });
 
+  function playVideo(video: any) {
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Automatic playback started!
+          // Show playing UI.
+          // We can now safely pause video...
+          video.pause();
+        })
+        .catch((error: any) => {
+          // Auto-play was prevented
+          // Show paused UI.
+        });
+    }
+  }
+
   if (reelLimitedInfoQuery.isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -31,7 +49,6 @@ function ShortVideos() {
   }
 
   const { data } = reelLimitedInfoQuery;
-  // console.log(data);
 
   return (
     <article>
@@ -39,8 +56,8 @@ function ShortVideos() {
       <div className={styles.parentReelsContainer}>
         {data?.reels.map((reel) => (
           <Link
-            to={`/short-videos/${reel.id}`}
-            key={reel.id}
+            to={`/short-videos/${reel.short_videos_id}`}
+            key={reel.short_videos_id}
             className={styles.link}
           >
             {showVideoIcon ? (
@@ -50,12 +67,20 @@ function ShortVideos() {
                 className={styles.playIcon}
               />
             ) : undefined}
-            <div key={reel.id} className={styles.shortVideoAndDetailsCard}>
+            <div className={styles.shortVideoAndDetailsCard}>
               <video
                 className={styles.shortVideosVideo}
                 onMouseOver={(event) => {
                   const videoElement = event.target as HTMLVideoElement;
-                  videoElement.play();
+                  var isPlaying =
+                    videoElement.currentTime > 0 &&
+                    !videoElement.paused &&
+                    !videoElement.ended &&
+                    videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
+
+                  if (!isPlaying) {
+                    videoElement.play();
+                  }
                   setShowVideoIcon(false);
                 }}
                 onMouseOut={(event) => {

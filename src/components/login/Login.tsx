@@ -4,13 +4,15 @@ import { useState } from "react";
 import styles from "../register/register.module.css";
 
 type Props = {
+  passedEmail?: string;
   setDisplayRegisterForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function Login({ setDisplayRegisterForm }: Props): JSX.Element {
-  const [email, setEmail] = useState("");
+function Login({ passedEmail, setDisplayRegisterForm }: Props): JSX.Element {
+  const [email, setEmail] = useState(passedEmail ?? "");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
+  // set dynamic error based on response from the database
+  const [error, setError] = useState("");
 
   const loginQuery = useQuery({
     queryKey: ["login"],

@@ -1,0 +1,11 @@
+.createGroupPostArea {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.createGroupPostArea .userImg {
+  width: 2.6875rem;
+  height: 2.6875rem;
+  flex-shrink: 0;
+  border-radius: 2.6875rem;
+}

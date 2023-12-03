@@ -105,3 +105,113 @@
   margin: 0%;
   padding: 1rem 1rem 2rem 1rem;
 }
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .winnersContainer {
+    display: block;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    padding: 0;
+    box-sizing: border-box;
+    height: fit-content;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .winnersContainer h5 {
+    color: #000000;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    border: 1px solid red;
+  }
+
+  .winnersContainer .subHeading {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    background: rgba(0, 209, 33, 0.15);
+    line-height: 136.4%;
+    width: 9.5rem;
+    /* padding: 0.4rem 0.8rem; */
+  }
+
+  .winnersContainer .firstItem {
+    grid-row: span 3 / span 3;
+    text-decoration: none;
+    width: 35rem;
+    max-height: 29.4rem;
+    background-color: #ffffff;
+  }
+
+  .winnersContainer .firstItem .nameAndSubHeadingDiv {
+    display: flex;
+    align-items: center;
+    /* padding: 0 3rem; */
+    margin: 0;
+  }
+
+  .firstItem .nameAndSubHeadingDiv h5 {
+    margin-right: auto;
+  }
+
+  .firstItem .text {
+    /* padding: 0 3rem; */
+    width: 21.125rem;
+    margin: 0;
+  }
+
+  .winnersContainer .text {
+    color: #000000;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .firstItem .winnerImg {
+    height: 20rem;
+    width: 100%;
+  }
+
+  .errorMsg {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .winnersContainer .secondItem,
+  .winnersContainer .thirdItem {
+    display: flex;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
+
+  .winnersContainer .secondItem .winnerImg,
+  .winnersContainer .thirdItem .winnerImg {
+    width: 50%;
+    height: 100%;
+  }
+
+  .secondItem .nameAndSubHeadingDiv,
+  .thirdItem .nameAndSubHeadingDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 1rem;
+  }
+
+  .secondItem .nameAndSubHeadingDiv h5,
+  .thirdItem .nameAndSubHeadingDiv h5 {
+    margin: 0%;
+    padding: 0.5rem 0;
+  }
+
+  .secondItem .text,
+  .thirdItem .text {
+    margin: 0%;
+    /* padding: 1rem 1rem 2rem 1rem; */
+  }
+}

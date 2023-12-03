@@ -1,0 +1,6 @@
+.formTextInputArea {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.125rem;
+}

@@ -1,0 +1,32 @@
+.imgArea {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.imgArea img {
+  width: 100%;
+}
+
+.viewMembersOrPostArea {
+  display: flex;
+  border: 2px solid yellow;
+}
+
+.viewMembersOrPostArea div {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: 90%;
+  margin: auto;
+}
+
+.viewMembersOrPostArea button {
+  width: 9.0625rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: none;
+}

@@ -7,11 +7,11 @@
   font-weight: 400;
   line-height: 154.4%; /* 24.704px */
   width: 80%;
-  padding: 2rem 0 5rem 4rem;
+  padding: 2rem 0 5rem 2rem;
 }
 
 .awardInfoDiv {
-  max-width: 80%;
+  max-width: 95%;
   margin: auto;
   text-align: center;
 }
@@ -65,4 +65,37 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .intro {
+    width: 80%;
+    padding: 2rem 0 5rem 2rem;
+  }
+  .awardLogo {
+    display: none;
+  }
+  .awardName {
+    color: #028a17;
+    font-family: "Jacques Francois", serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0%;
+    margin: 0%;
+  }
+  .awardWord {
+    color: #028a17;
+    font-family: "Jacques Francois";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0%;
+    padding: 0;
+  }
 }

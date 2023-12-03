@@ -1,10 +1,12 @@
 import { Post } from "../../typesAndInterfaces/plan";
+import Cookies from "js-cookie";
 
 async function getPostByIdWithCommentsFn({
   post_id,
 }: {
   post_id: string;
 }): Promise<Post> {
+  const token = Cookies.get("token");
   // returns the most current posts
   const url = `http://localhost:3000/api/v1/posts/getPostByIdWithComments?post_id=${post_id}`;
 
@@ -12,6 +14,7 @@ async function getPostByIdWithCommentsFn({
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
   });
 

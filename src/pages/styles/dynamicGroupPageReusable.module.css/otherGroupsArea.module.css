@@ -1,0 +1,82 @@
+.otherGroupsArea {
+  border: 1px solid #028a17;
+  margin-top: 2rem;
+}
+
+.otherGroupsArea .contentCard {
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+.otherGroupsArea .cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 3rem auto;
+  gap: 1.8rem;
+}
+
+.otherGroupsArea .card {
+  width: 38%;
+  margin-bottom: 1%;
+  background-color: #ebfaed;
+  height: fit-content;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 0.625rem;
+}
+
+.otherGroupsArea img {
+  width: 100%;
+  border-radius: 0.625rem 0.625rem 0px 0px;
+}
+
+.otherGroupsArea h4 {
+  color: #000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+
+.otherGroupsArea h5 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.otherGroupsArea .membersAndPosts {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.otherGroupsArea p {
+  margin: 0;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.otherGroupsArea p:nth-of-type(1) {
+  margin-right: auto;
+}
+
+.otherGroupsArea .joinBtn {
+  display: flex;
+  padding: 0.625rem 1.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}

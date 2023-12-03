@@ -1,0 +1,14 @@
+.body {
+  border: 2px solid blue;
+  display: flex;
+  gap: 1rem;
+  padding: 3rem;
+}
+/* 
+.body .firstHalfContent {
+  border: 19px solid yellow;
+} */
+
+/* .body .secondHalfContent {
+  border: 19px solid red;
+} */

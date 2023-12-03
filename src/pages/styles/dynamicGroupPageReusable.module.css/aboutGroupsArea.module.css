@@ -1,0 +1,45 @@
+.aboutGroupsArea {
+  border: 1px solid #028a17;
+  padding: 0 1rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.aboutGroupsArea h4 {
+  color: #000000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 14.6875rem;
+  height: 1.1592rem;
+  flex-shrink: 0;
+}
+
+.aboutGroupsArea p {
+  color: #000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aboutGroupsArea button {
+  display: flex;
+  width: 18.1875rem;
+  height: 2.9375rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

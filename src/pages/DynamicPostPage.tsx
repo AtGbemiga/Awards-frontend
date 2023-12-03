@@ -5,6 +5,10 @@ import styles from "./styles/dynamic.module.css";
 import SubHeading from "../components/app/SubHeading";
 import postCommentFn from "../lib/comments/postComment";
 import { useState } from "react";
+import Login from "../components/login/Login";
+import Register from "../components/register/Register";
+import stylesTwo from "../components/register/register.module.css";
+import Cookies from "js-cookie";
 
 function DynamicPostPage(): JSX.Element {
   // states for the comment form
@@ -14,6 +18,9 @@ function DynamicPostPage(): JSX.Element {
   const [showCommentForm, setShowCommentForm] = useState(true);
   const [showCommentSuccessMessage, setShowCommentSuccessMessage] =
     useState(false);
+
+  const [displayRegisterForm, setDisplayRegisterForm] = useState(false); // default false
+  const [toggleRegisterAndLogin, setToggleRegisterAndLogin] = useState(true);
 
   // get the post id from the params. This is the post that was previous clicked on.
   const { post_id } = useParams();
@@ -34,6 +41,10 @@ function DynamicPostPage(): JSX.Element {
   async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!post_id) return;
+    if (!Cookies.get("token")) {
+      setDisplayRegisterForm(true);
+      return;
+    }
     await postCommentFn({ post_id }, { name, email, statement });
     console.log("comment posted");
     setShowCommentForm(false);
@@ -48,13 +59,19 @@ function DynamicPostPage(): JSX.Element {
     return <div>Error: {singlePostQuery.error.message}</div>;
   }
 
+  function handleToggleRegisterAndLogin() {
+    setToggleRegisterAndLogin((prevState) => !prevState);
+  }
   return (
     <div>
       <SubHeading value="PAST HEROS" />
       {Array.isArray(singlePostQuery.data) && (
         <div>
           {/* Why is typescript intellisence not working in here? */}
-          <section className={styles.postSection}>
+          <section
+            className={styles.postSection}
+            onClick={() => setDisplayRegisterForm(false)}
+          >
             <div className={styles.postTopSection}>
               <div>
                 <img
@@ -103,7 +120,7 @@ function DynamicPostPage(): JSX.Element {
               </div>
 
               <div className={styles.postCommentForm}>
-                <div>
+                <div className={styles.singleLabelAndInput}>
                   <label htmlFor="name">Name</label>
                   <input
                     type="text"
@@ -114,7 +131,7 @@ function DynamicPostPage(): JSX.Element {
                     aria-required
                   />
                 </div>
-                <div>
+                <div className={styles.singleLabelAndInput}>
                   <label htmlFor="email">Email</label>
                   <input
                     type="email"
@@ -141,6 +158,35 @@ function DynamicPostPage(): JSX.Element {
               </div>
             </form>
           )}
+          <hr />
+          {displayRegisterForm && (
+            <section className={stylesTwo.registerFormSection}>
+              {toggleRegisterAndLogin ? (
+                <Register
+                  passedName={name}
+                  passedEmail={email}
+                  setDisplayRegisterForm={setDisplayRegisterForm}
+                />
+              ) : (
+                <Login
+                  setDisplayRegisterForm={setDisplayRegisterForm}
+                  passedEmail={email}
+                />
+              )}
+              <div className={stylesTwo.loginOption}>
+                <p>
+                  Already have an account?{" "}
+                  <button
+                    onClick={handleToggleRegisterAndLogin}
+                    className={stylesTwo.loginOptionLink}
+                  >
+                    {toggleRegisterAndLogin ? "Login" : "Register"}
+                  </button>
+                </p>
+              </div>
+            </section>
+          )}
+          <hr />
           {showCommentSuccessMessage && (
             <div className={styles.commentSuccessMessage}>
               <p>thank you for your comment</p>

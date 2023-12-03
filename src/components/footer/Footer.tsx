@@ -1,7 +1,7 @@
 import styles from "./footer.module.css";
 function Footer(): JSX.Element {
   return (
-    <>
+    <div className={styles.footer}>
       <section className={styles.firstSection}>
         <div>
           <div className={styles.logoDiv}>
@@ -92,9 +92,38 @@ function Footer(): JSX.Element {
             <li>Shop</li>
           </ul>
         </div>
-        <img src="/Ellipse 1.svg" alt="Ellipse 1 circle" />
+        <img
+          src="/Ellipse 1.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipse}
+        />
+        <img
+          src="/Ellipse 2.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipseTwo}
+        />
+        <img
+          src="/Ellipse 3.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipseThree}
+        />
+        <img
+          src="/Ellipse 4.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipseFour}
+        />
+        <img
+          src="/Ellipse 5.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipseFive}
+        />
+        <img
+          src="/Ellipse 6.svg"
+          alt="Ellipse 1 circle"
+          className={styles.ellipseSix}
+        />
       </section>
-    </>
+    </div>
   );
 }
 export default Footer;

@@ -104,3 +104,159 @@
   font-weight: 600;
   line-height: 136.4%; /* 32.736px */
 }
+
+.inputDiv {
+  display: flex;
+}
+
+.inputDiv input {
+  margin-right: auto;
+  width: 70%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.buttonDiv {
+  border: 1px solid green;
+  background-color: #046413;
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+.buttonDiv:hover {
+  cursor: pointer;
+}
+
+.commentSection {
+  border: 2px solid purple;
+  margin-top: 1rem;
+}
+
+.commentDiv {
+  border: 1px solid red;
+  display: flex;
+  align-items: normal;
+}
+
+.creatorImgDiv {
+  margin-right: 0.5rem;
+}
+
+.commentInfoDiv {
+  border: 1px solid blue;
+  padding: 0%;
+  margin: 0%;
+  width: 100%;
+  background-color: #effbf1c4;
+  padding: 0.5rem;
+}
+
+.commentInfoDiv h3 {
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  color: #000000;
+  text-overflow: ellipsis;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.commentInfoDiv p {
+  margin: 0%;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.seeMoreDiv {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.seeMore {
+  display: flex;
+  width: fit-content;
+  padding: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: rgba(4, 100, 19, 0.8);
+  border: none;
+  color: #ffffff;
+}
+
+.seeMore:hover,
+.commentIcon:hover {
+  cursor: pointer;
+}
+
+.downloadIcon:hover {
+  cursor: pointer;
+}
+
+/* media query */
+@media screen and (max-width: 720px) {
+  .videoCard {
+    border: 3px solid red;
+    display: block;
+    height: fit-content;
+    padding: 1rem;
+    justify-content: center;
+  }
+  .videoOuterDiv {
+    width: 100%;
+    border: 3px solid black;
+    height: 35rem;
+  }
+  .videoInfo {
+    border: 2px solid blue;
+    width: 100vw;
+    /* padding: 0 1rem; */
+  }
+  .commentInfoDiv {
+    border: 1px solid blue;
+    padding: 0%;
+    margin: 0%;
+    width: 100vw;
+    background-color: #effbf1c4;
+    /* padding: 0.5rem; */
+  }
+  .inputDiv input {
+    margin-right: auto;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .seeMore {
+    display: flex;
+    width: fit-content;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: rgba(4, 100, 19, 0.8);
+    border: none;
+    color: #ffffff;
+  }
+  .creatorImgDiv {
+    margin-right: 0;
+  }
+  .commentDiv {
+    border: 1px solid red;
+    display: block;
+    align-items: normal;
+    width: 100%;
+  }
+}

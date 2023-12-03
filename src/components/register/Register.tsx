@@ -4,21 +4,34 @@ import { useState } from "react";
 import styles from "./register.module.css";
 
 type Props = {
-  passedEmail: string;
+  passedEmail?: string;
+  passedName?: string;
+  passedPhoneNumber?: string;
   setDisplayRegisterForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function Register({ passedEmail, setDisplayRegisterForm }: Props): JSX.Element {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState(passedEmail);
+function Register({
+  passedName,
+  passedEmail,
+  passedPhoneNumber,
+  setDisplayRegisterForm,
+}: Props): JSX.Element {
+  const [username, setUsername] = useState(passedName ?? "");
+  const [email, setEmail] = useState(passedEmail ?? "");
   const [password, setPassword] = useState("");
+  const [users_phone_number, setUsers_phone_number] = useState(
+    passedPhoneNumber ?? ""
+  );
   const [retypePassword, setRetypePassword] = useState("");
   const [retypePasswordError, setRetypePasswordError] = useState(false);
 
   const registerQuery = useQuery({
     queryKey: ["register"],
     queryFn: () => {
-      const res = authFn({ username, email, password }, "register");
+      const res = authFn(
+        { username, email, password, users_phone_number },
+        "register"
+      );
       return res;
     },
     enabled: false,
@@ -63,6 +76,20 @@ function Register({ passedEmail, setDisplayRegisterForm }: Props): JSX.Element {
             required
             aria-required
             autoComplete="email"
+          />
+        </div>
+        <div>
+          <label htmlFor="users_phone_number"></label>
+          <input
+            type="users_phone_number"
+            id="users_phone_number"
+            name="users_phone_number"
+            placeholder="enter phone number"
+            onChange={(event) => setUsers_phone_number(event.target.value)}
+            value={users_phone_number}
+            required
+            aria-required
+            autoComplete="tel-national"
           />
         </div>
         <div>

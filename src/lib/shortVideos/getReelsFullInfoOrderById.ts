@@ -22,7 +22,7 @@ async function getReelsFullInfoOrderByIdFn({
       `Request failed with status ${res.status}, ${exactErrorMsg.message}`
     );
   }
-  console.log(video_id);
+  // console.log(video_id);
 
   // get good res at this stage
   const data: Response = await res.json();

@@ -1,4 +1,5 @@
-// import SecondPromotionsSection from "../components/home/SecondPromotionsSection";
+import SecondPromotionsSection from "../components/home/SecondPromotionsSection";
+import LargeFrameShortVideosOnHomePage from "../components/home/LargeFrameShortVideosOnHomePage";
 import WinnersOnHomePage from "../components/home/WinnersOnHomePage";
 import styles from "./styles/home.module.css";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <article className={styles.parentContainer}>
+      <div className={styles.overlay}></div>
       <img
         src="/Rectangle 3.png"
         alt="placeholder img"
@@ -188,6 +190,9 @@ const HomePage = (): JSX.Element => {
           </div>
         </div>
       </section>
+      <section className={styles.largeFrameShortVideosOnHomePage}>
+        <LargeFrameShortVideosOnHomePage />
+      </section>
       <section id="ourPartners" className={styles.ourPartnersContainer}>
         <h3>OUR PARTNERS</h3>
         <div>
@@ -208,8 +213,11 @@ const HomePage = (): JSX.Element => {
           <img src="/logo512.png" alt="placholder partner" />
         </div>
       </section>
-      <>{/* <SecondPromotionsSection /> */}</>
+      <section className={styles.secondPromotionsSection}>
+        <SecondPromotionsSection />
+      </section>
       <section className={styles.supportPrideOfNigeriaContainer}>
+        <div className={styles.supportPrideOfNgGradient}></div>
         <img src="/Rectangle 9.png" alt="placeholder background img" />
         <div>
           <h2>SUPPORT THE NEXT PRIDE OF NIGERIA</h2>

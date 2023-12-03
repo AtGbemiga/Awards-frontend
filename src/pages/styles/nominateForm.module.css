@@ -3,6 +3,13 @@
   padding: 1rem 9rem 2rem 9rem;
 }
 
+.nominationForm input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #ededff;
+}
+
 .formHeader {
   color: #000000;
   text-align: center;
@@ -26,7 +33,10 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 136.4%; /* 27.28px */
+  line-height: 136.4%;
+  background: rgba(0, 209, 33, 0.1);
+  /* min-width: 40%; */
+  padding: 0.3rem 3rem 0.3rem 0;
 }
 
 .awardDiv label {
@@ -71,4 +81,9 @@
 
 .submitBtn:hover {
   cursor: pointer;
+}
+
+.emailAndPhoneFlexArea {
+  display: flex;
+  gap: 3rem;
 }
